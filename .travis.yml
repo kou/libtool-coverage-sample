@@ -1,7 +1,7 @@
 language: c
 install:
   - sudo apt-get update -qq -y
-  - sudo apt-get install -qq -y autotools-dev lcov
+  - sudo apt-get install -qq -y autotools-dev
   - sudo pip install cpp-coveralls
 before_script:
   - ./autogen.sh
