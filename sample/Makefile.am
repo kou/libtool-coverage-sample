@@ -16,4 +16,5 @@ libsample_la_LIBADD =				\
 	$(COVERAGE_LIBS)
 
 CLEANFILES =					\
-	*.gcno
+	*.gcno					\
+	*.gcov
