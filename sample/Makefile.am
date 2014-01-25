@@ -14,3 +14,6 @@ libsample_la_SOURCES =				\
 
 libsample_la_LIBADD =				\
 	$(COVERAGE_LIBS)
+
+CLEANFILES =					\
+	*.gcno
