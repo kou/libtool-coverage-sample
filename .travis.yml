@@ -2,13 +2,11 @@ language: c
 install:
   - sudo apt-get update -qq -y
   - sudo apt-get install -qq -y autotools-dev
-  - sudo pip install requests
+  - sudo pip install cpp-coveralls
 before_script:
   - ./autogen.sh
   - ./configure
 script:
   - make check
 after_success:
-  - git clone https://github.com/kou/cpp-coveralls
-  - (cd cpp-coveralls && git checkout support-libtool)
-  - PYTHONPATH=$PWD/cpp-coveralls python -c 'import coveralls; coveralls.run()'
+  - coveralls
